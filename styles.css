@@ -22,8 +22,6 @@ body {
 }
 
 #page1 {
-  height: 130vh;
-  width: 100vw;
   max-width: 100%;
   position: relative;
   overflow: hidden;
@@ -31,11 +29,11 @@ body {
 }
 
 #nav {
-  height: 100px;
+  height: 14vh;
   /* background-color: red; */
   width: 100%;
   display: flex;
-  padding: 0 30px;
+  padding: 0 3vw;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -43,7 +41,7 @@ body {
 }
 
 #nav img {
-  height: 32px;
+  height: 50%;
   width: 33.3%;
 }
 
@@ -60,7 +58,7 @@ body {
 
 #slider {
   /* background-color: red; */
-  height: 350px;
+  height: 45vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -167,60 +165,64 @@ body {
   font-weight: 50;
 }
 #name {
-  height: 50vh;
+  height: 100%;
   width: 100vw;
   max-width: 100%;
-  padding: 2%;
+  padding: 1vh;
 }
 #name h1 {
   font-family: canopee;
-  font-size: 30vw;
-  letter-spacing: -25px;
+  font-size: 34vw;
   font-weight: 100;
+  letter-spacing: -5px;
   text-align: center;
-  background-color: #1c1c19;
+  background-color: #1b1b19;
   color: #c4bcb3;
-  line-height: 450px;
+  line-height: 100%;
+  /* width: 50%; */
 }
 
 #page2 {
-  height: 150vh;
   width: 100%;
   background-color: #c4bcb3;
+  padding: 1vw;
+  /* display: grid;
+  grid-gap: 1vw;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  justify-items: center; */
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding: 90px 40px;
+  justify-content: center;
 }
 
 #page2-left {
   height: 100%;
-  padding-right: 50px;
+  padding: 1vw;
   width: 35%;
-  /* background-color: red; */
   border-right: 1px solid #4b4b4b;
 }
 
 #page2-left h2 {
-  font-size: 150px;
+  font-size: 9vw;
   font-family: canopee;
   line-height: 150px;
   font-weight: 100;
 }
 
 #page2-left h2 span {
-  font-size: 210px;
+  font-size: 12vw;
   font-weight: 900;
 }
 
 #page2-left img {
-  height: 50%;
+  min-height: 50%;
   width: 100%;
   object-fit: cover;
 }
 
 #page2-left p {
-  font-size: 34px;
+  font-size: 2vw;
   font-family: domain;
   color: #2f2f2f;
   margin-top: 20px;
@@ -229,19 +231,19 @@ body {
 #page2-right {
   height: 100%;
   width: 70%;
-  padding: 0 60px;
+  padding: 1vw;
 }
 
 #page2-right img {
-  height: 53%;
-  object-fit: cover;
+  /* height: 10%; */
+  object-fit: contain;
   width: 100%;
 }
 
 #page2-right h1 {
   font-family: canopee;
-  font-size: 100px;
-  font-weight: 100;
+  font-size: 6vw;
+  font-weight: 200;
   letter-spacing: -1px;
 }
 
@@ -404,4 +406,64 @@ body {
 
 #page5:hover h1 {
   animation-play-state: paused;
+}
+
+@media (max-width: 475px) {
+  #nav {
+    height: 8vh;
+  }
+  #nav h5 {
+    display: none;
+  }
+  #nav img {
+    height: 90%;
+  }
+  #slider1 {
+    display: none;
+  }
+  #slider2 {
+    width: 100%;
+  }
+  #slider2 h2 {
+    font-size: 18vw;
+    font-weight: 600;
+  }
+  #slider2 h3 {
+    font-size: 6vw;
+    padding: 1vh;
+  }
+  #slider2 h6 {
+    font-size: 3vw;
+  }
+  #slider3 {
+    display: none;
+  }
+  #page2 {
+    flex-direction: column;
+  }
+  #page2-left {
+    width: 100%;
+    border-right: 0;
+    border-bottom: 1px solid #4b4b4b;
+  }
+  #page2-left h2 {
+    font-size: 25vw;
+    line-height: 1;
+  }
+  #page2-left p {
+    font-size: 7vw;
+  }
+
+  #page2-left h2 span {
+    font-size: 35vw;
+    font-weight: 900;
+  }
+  #page2-right {
+    width: 100%;
+    border-bottom: 1px solid #4b4b4b;
+  }
+
+  #page2-right h1 {
+    letter-spacing: 1px;
+  }
 }
